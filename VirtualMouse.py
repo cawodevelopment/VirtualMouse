@@ -23,7 +23,7 @@ while True:
     flipped_frame = detector.findHands(flipped_frame)
     lmList = detector.findPosition(flipped_frame, draw=False)
 
-    if len(lmList) != 0:
+    if len(lmList) > 12:
         x0, y0 = lmList[4][1], lmList[4][2]
         x1, y1 = lmList[8][1], lmList[8][2]
         x2, y2 = lmList[12][1], lmList[12][2]
